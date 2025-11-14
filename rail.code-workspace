@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "rail",
+			"path": "."
+		},
+		{
+			"name": "backend",
+			"path": "../../Attendance-Tracking-System-/backend"
+		},
+		{
+			"name": "frontend-react",
+			"path": "../../Attendance-Tracking-System-/frontend-react"
+		}
+	],
+	"settings": {}
+}
