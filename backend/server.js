@@ -32,7 +32,9 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors());
+// Allow OPTIONS for all routes
+app.options(/.*/, cors());
+
 
 
 // ---------------- HELPERS ----------------
