@@ -15,17 +15,24 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ---------------- MIDDLEWARE ----------------
+
+app.use(bodyParser.json());
+
 app.use(cors({
   origin: [
+    "https://frontend-attendance-psi.vercel.app",                // primary Vercel URL you used
+    "https://frontend-attendance-p11iwr5vz-sivas-projects-249659f8.vercel.app", // alternative Vercel alias (if used)
+    "https://frontend-attendance-git-main-sivas-projects-249659f8.vercel.app", // another possible alias
     "http://localhost:3000",
     "https://attendance-tracking-system-nu.vercel.app",
     "https://himate111.github.io"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"],
   credentials: true
 }));
 
-app.use(bodyParser.json());
+app.options("*", cors());
 
 
 // ---------------- HELPERS ----------------
